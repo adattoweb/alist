@@ -9,13 +9,10 @@ import Modal from '../Modal/Modal'
 import React, { useState, useEffect} from 'react'
 import ReactDOM from 'react-dom'
 // ДОБРО ПОЖАЛОВАТЬ В АД!!
+// Головне що працює!
 export default function App() {
   console.log('App render')
 
-  if(window.location.pathname !== '/'){
-    window.location.pathname = "/"
-    return <Page404></Page404>
-  }
   let arrDefaults = [
     ['background', '#000'],
     ['burger', '#fff'],
