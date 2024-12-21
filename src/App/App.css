@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montagu+Slab:opsz,wght@16..144,100..700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+*/
+*{
+    margin: 0;
+}
+.background{
+  background-color: #000;
+}
+.color{
+  color: #fff;
+}
+.color-two{
+  color: #000;
+}
+.border{
+  border-color: #000;
+}
+.background-two{
+  background-color: #fff;
+}
+html{
+    overflow-x: hidden;
+}
+html,body{
+    height: 100%;
+}
+.wrapper, #root{
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.github{
+    background-color: #2E2E2E;
+}
+.telegram{
+    background-color: #59BBE7;
+}
+.discord{
+    background-color: #3D5ADC;
+}
+.button{
+    display: inline-block;
+    color: #fff;
+    border-radius: 10px;
+    padding: 8px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Montserrat Alternates', sans-serif;
+    transition: 0.3s ease all;
+    border: 3px solid #000;
+    text-decoration: none;
+}
+@media screen and (max-width: 1200px) {
+    .button{
+        border-radius: 6px !important;
+        padding: 6px 18px !important;
+        font-size: 14px !important;
+        border: 3px solid #000 !important;
+    }
+}
+@media screen and (max-width: 600px) {
+    .button{
+        border-radius: 6px !important;
+        padding: 5px 14px !important;
+        font-size: 13px !important;
+        border: 3px solid #000 !important;
+    }
+}
+html{ scroll-behavior: smooth; }
+::-webkit-scrollbar {
+	width: 0.5rem;
+	border-radius: 0.125rem;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 0.12rem;
+	background-color: #eeb20c;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 0.125rem;
+	background-color: #0D0D11;
+}
+::selection {
+    background-color: #141416;
+    color: #ffffff; 
+  }
+  ::-moz-selection {
+    background-color: #141416;
+    color: #ffffff;
+  }
+
+
+/*
+ANIMATION
+*/
+
+.tracking-in-contract {
+	-webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }
+  @keyframes tracking-in-contract {
+    0% {
+      letter-spacing: 1em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      letter-spacing: normal;
+      opacity: 1;
+    }
+  }

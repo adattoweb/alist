@@ -1,0 +1,118 @@
+.content{
+    width: 100vw;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content .button{
+    background: #000 !important;
+}
+.content .button:hover{
+    background: #fff !important;
+    color: #000;
+}
+.content-child{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 30px;
+}
+.content-child h3{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+.content-child h5{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+.content-child ul{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    align-items: start;
+    gap: 7px;
+}
+.content-child ul li{
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Montserrat Alternates', sans-serif;
+    position: relative;
+    padding-left: 36px; /* Відступ для кружечка */
+}
+.content-child ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    background-color: #ffffff; /* Колір кружечка */
+    border: 3px solid #000;
+    border-radius: 50%; /* Робимо кружечок */
+    transition: 0.3s ease all;
+  }
+.content-child ul li.active::before {
+    background-color: #000000;
+}
+@media screen and (max-width: 800px){
+    .content-child h3{
+        font-size: 30px;
+    }
+    .content-child h5{
+        font-size: 20px;
+    }
+    .content-child ul li{
+        font-size: 16px;
+        padding-left: 30px; /* Відступ для кружечка */
+    }
+    .content-child ul li::before {
+        width: 15px;
+        height: 15px;
+        border: 2px solid #000;
+      }
+}
+@media screen and (max-width: 600px){
+    .content-child h3{
+        font-size: 25px;
+    }
+    .content-child h5{
+        font-size: 18px;
+    }
+    .content-child ul{
+        gap: 5px;
+    }
+    .content-child ul li{
+        font-size: 16px;
+        padding-left: 26px; /* Відступ для кружечка */
+    }
+    .content-child ul li::before {
+        width: 13px;
+        height: 13px;
+      }
+}
+@media screen and (max-width: 350px){
+    .content-child h3{
+        font-size: 20px;
+    }
+    .content-child h5{
+        font-size: 16px;
+    }
+    .content-child ul li{
+        font-size: 14px;
+        padding-left: 20px; /* Відступ для кружечка */
+    }
+    .content-child ul li::before {
+        width: 10px;
+        height: 10px;
+      }
+}

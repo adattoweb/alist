@@ -1,0 +1,338 @@
+.task{
+    margin-top: 100px;
+    width: 100vw;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.task-child{
+    display: flex;
+    width: 90vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    gap: 20px;
+}
+.task-item{
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 280px;
+    height: 330px;
+    gap: 3px;
+}
+.task-item h3{
+    text-align: center;
+    padding: 3px 0px;
+    width: 100%;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 5px 5px 0px 0px;
+}
+.task-content{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: start;
+    gap: 20px;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+    overflow-y: auto;
+    gap: 10px;
+    height: 80%;
+}
+.task-list .task-info {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px;
+}
+.task-list-item{
+    border: 2px solid;
+    width: 220px;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    border-radius: 10px;
+    position: relative;
+    padding-left: 40px; /* Відступ для кружечка */
+}
+.edit-list{
+    display: flex;
+    align-items: center;
+    width: 95%;
+}
+.edit-list .task-buttontwo{
+    width: 30px;
+    height: 20px;
+}
+.task-list-item input{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    outline:none;
+    border: none;
+    border-bottom: 2px solid #000;
+    background-color: rgba(255,255,255, 0);
+    color: #000;
+}
+@media screen and (max-width: 650px){
+    .edit-list .task-buttontwo{
+        width: 20px;
+        height: 15px;
+    }
+    .task-list-item input{
+        font-size: 9px;
+        width: 80%;
+    }
+}
+.circle {
+    margin-left: 10px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff; /* Колір кружечка */
+    border: 3px solid #000;
+    border-radius: 50%; /* Робимо кружечок */
+    transition: 0.3s ease all;
+    cursor: pointer;
+  }
+.circle.active {
+    background-color: #000000;
+}
+.hinfo{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+.task-list-item h5{
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    border-radius: 5px;
+    padding: 2px 0px;
+}
+.task-list-item p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+}
+.task-input{
+    display: none;
+    width: 220px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+.task-input input::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+.task-input input:nth-child(2)::placeholder{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+.task-inputs{
+    width: 50%;
+}
+.task-input input{
+    width: 100%;
+    border: 2px solid #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    color: #000;
+}
+.task-input input:nth-child(2){
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #000;
+}
+.task-input input:focus{
+    outline: none;
+    border-bottom: 2px solid #000;
+}
+
+.task-input.active{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+.task-buttontwo{
+    background-color: #000;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border: 3px solid #000;
+    transition: 0.3s ease all;
+}
+.task-button{
+    background-color: #000;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 3px solid #000;
+    transition: 0.3s ease all;
+    margin-bottom: 10px;
+}
+.task-button:hover{
+    background-color: #fff;
+    color: #000;
+}
+.task-header{
+    flex-direction: column;
+    width: 280px;
+    height: max-content;
+    padding: 20px 15px;
+    align-items: start;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.task-header-item{
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+.task-header-item label{
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+}
+
+.task-header-item input{
+    height: 20px;
+    width: 70px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+.list-images{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    padding: 4px 0px;
+}
+.list-images img{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.task-btn{
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 600px){
+    .task-item{
+        border-radius: 10px;
+        border: 3px solid #000;
+        width: 240px;
+        height: 350px;
+        gap: 3px;
+    }
+    .task-header{
+        width: 260px;
+    }
+    .task-item h3{
+        font-size: 11px;
+    }
+    .task-list{
+        height: 100%;
+    }
+    .task-list-item{
+        width: 180px;
+        height: max-content;
+        border-radius: 8px;
+        padding-left: 40px; /* Відступ для кружечка */
+    }
+    .task-list-item h5{
+        font-size: 12px;
+    }
+    .task-list-item p{
+        font-size: 10px;
+    }
+    .task-input{
+        width: 160px;
+        border-radius: 8px;
+    }
+    .task-input input::placeholder{
+        font-size: 12px;
+    }
+    .task-input input:nth-child(2)::placeholder{
+        font-size: 10px;
+    }
+    .task-inputs{
+        width: 70%;
+    }
+    .task-input input{
+        font-size: 12px !important;
+    }
+    .task-input input:nth-child(2){
+        font-size: 10px !important;
+    }
+    .task-button{
+        font-size: 25px;
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
+    }
+    .list-images img{
+        width: 15px;
+        height: 15px;
+    }
+}
+.button-reset{  
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: #ff1c1c;
+    padding: 10px;
+    border-radius: 5px;
+}
