@@ -11,7 +11,6 @@ import ReactDOM from 'react-dom'
 // Головне що працює!
 export default function App() {
   console.log('App render')
-
   let arrDefaults = [
     ['background', '#000'],
     ['burger', '#fff'],
